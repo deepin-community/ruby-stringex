@@ -1,0 +1,2 @@
+Test-Command: gem2deb-test-runner --check-dependencies --autopkgtest 2>&1
+Depends: @, gem2deb-test-runner, ruby-activerecord, ruby-i18n, ruby-minitest, ruby-redcloth, ruby-sqlite3, ruby-test-unit

@@ -1,0 +1,28 @@
+Description: rename update_attributes! to update!
+  this old name update_attributes! has been removed from Rails 6.1
+  according to the following link:
+  https://rubyinrails.com/2019/04/09/rails-6-1-activerecord-deprecates-update-attributes-methods/
+Forwarded: https://github.com/rsl/stringex/pull/206
+Author: Cédric Boutillier <boutil@debian.org>
+Last-Update: 2021-11-23
+
+--- a/test/unit/acts_as_url/adapter/activerecord.rb
++++ b/test/unit/acts_as_url/adapter/activerecord.rb
+@@ -66,6 +66,6 @@
+   end
+ 
+   def adapter_specific_update(instance, hash)
+-    instance.send :update_attributes!, hash
++    instance.send :update!, hash
+   end
+ end
+--- a/test/unit/acts_as_url/adapter/mongoid.rb
++++ b/test/unit/acts_as_url/adapter/mongoid.rb
+@@ -77,6 +77,6 @@
+   end
+ 
+   def adapter_specific_update(instance, hash)
+-    instance.send :update_attributes!, hash
++    instance.send :update!, hash
+   end
+ end

@@ -1,0 +1,33 @@
+Source: ruby-stringex
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Youhei SASAKI <uwabami@gfd-dennou.org>
+Build-Depends: debhelper-compat (= 13),
+               gem2deb,
+               rake,
+               ruby-activerecord,
+               ruby-i18n,
+               ruby-minitest,
+               ruby-redcloth,
+               ruby-sqlite3,
+               ruby-test-unit
+Standards-Version: 4.6.1
+Vcs-Git: https://salsa.debian.org/ruby-team/ruby-stringex.git
+Vcs-Browser: https://salsa.debian.org/ruby-team/ruby-stringex
+Homepage: https://github.com/rsl/stringex
+Testsuite: autopkgtest-pkg-ruby
+XS-Ruby-Versions: all
+Rules-Requires-Root: no
+
+Package: ruby-stringex
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Multi-Arch: foreign
+Description: Some useful extensions to Ruby's String class
+ Some useful extensions to Ruby's String class. Stringex is made up of
+ three libraries:
+   - ActsAsUrl: permalink solution with better character translation
+   - Unidecoder: Unicode to ASCII transliteration
+   - StringExtensions: miscellaneous helper methods for the String class

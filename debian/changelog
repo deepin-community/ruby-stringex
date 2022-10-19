@@ -1,0 +1,155 @@
+ruby-stringex (2.8.5-4) UNRELEASED; urgency=medium
+
+  * update
+
+ -- Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>  Wed, 20 Jul 2022 17:00:52 +0800
+
+ruby-stringex (2.8.5-4) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Pirate Praveen ]
+  * Upload to unstable
+  * Update changelog with entry accepted in the archive
+
+  [ HIGUCHI Daisuke (VDR dai) ]
+  * Bump Standards-Version to 4.6.1
+  * eliminate lintian warning: update-debian-copyright
+
+ -- HIGUCHI Daisuke (VDR dai) <dai@debian.org>  Mon, 18 Jul 2022 13:59:05 +0900
+
+ruby-stringex (2.8.5-3) unstable; urgency=medium
+
+  * Team upload
+  * Switch to gem-install layout for bundle --local
+
+  [ Cédric Boutillier ]
+  * Add locales/ subdir to the list of files to install with the gem layout
+  * Drop modify_stringex_locales_path.patch, not needed any more
+  * Remove overrides for dh_auto_build and dh_auto_clean
+
+ -- Pirate Praveen <praveen@debian.org>  Sun, 23 Jan 2022 01:14:33 +0530
+
+ruby-stringex (2.8.5-2) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Apply multi-arch hints.
+    + ruby-stringex: Add Multi-Arch: foreign.
+  * Update watch file format version to 4.
+  * Bump debhelper from old 12 to 13.
+  * Update standards version to 4.5.1, no changes needed.
+
+  [ Cédric Boutillier ]
+  * Refresh patch about compatibility with i18n
+  * Use update! instead of update_attributes!, removed in rails 6.1
+  * Bump Standards-Version to 4.6.0 (no changes needed)
+
+ -- Cédric Boutillier <boutil@debian.org>  Tue, 23 Nov 2021 01:35:35 +0100
+
+ruby-stringex (2.8.5-1) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Remove obsolete fields Contact, Name from debian/upstream/metadata
+    (already present in machine-readable debian/copyright).
+
+  [ Youhei SASAKI ]
+  * New upstream version 2.8.5
+  * Follow upstream renaming: REAMDE.rdoc -> README.md
+
+ -- Youhei SASAKI <uwabami@gfd-dennou.org>  Wed, 13 May 2020 23:51:14 +0900
+
+ruby-stringex (2.8.4-2) unstable; urgency=medium
+
+  * Team upload.
+  * d/compat: Remove obsolete file.
+  * d/control: Add Rules-Requires-Root and Testsuite fields.
+  * d/copyright: Add Upstream-Contact.
+  * d/TODO.Debian: Rename to d/TODO to fix incorrect-packaging-filename.
+    (Build-Depends): Use debhelper-compat and raise version to 12.
+    (Standards-Version): Bump to 4.5.0.
+    (Depends): Drop interpreter dependency.
+  * d/watch: Fix URL.
+  * d/patches/fix-i18n-version-comatibility.patch: Add patch.
+    - Fix breakage by upload of ruby-i18n >= 1.x.
+  * d/patches/series: Enable new patch.
+  * d/upstream/: Add metadata.
+
+ -- Daniel Leidert <dleidert@debian.org>  Tue, 04 Feb 2020 15:56:44 +0100
+
+ruby-stringex (2.8.4-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ HIGUCHI Daisuke (VDR dai) ]
+  * New upstream release
+  * install stringex locales
+  * support autopkgtest
+  * Move Vcs-* to salsa.debian.org
+  * eliminate lintian warning: homepage-field-uses-insecure-uri
+  * eliminate lintian warning: debian-watch-uses-insecure-uri
+  * eliminate lintian warning: insecure-copyright-format-uri
+  * upgrade debhelper to 11.
+  * bump up Standards-Version 4.1.3.
+
+ -- HIGUCHI Daisuke (VDR dai) <dai@debian.org>  Sat, 17 Mar 2018 00:01:18 +0900
+
+ruby-stringex (2.7.1-1) unstable; urgency=medium
+
+  [ Cédric Boutillier ]
+  * Remove version in the gem2deb build-dependency
+  * Use https:// in Vcs-* fields
+  * Run wrap-and-sort on packaging files
+
+  [ Youhei SASAKI ]
+  * Drop obsolete patch: merge upstream
+  * New upstream version 2.7.1
+  * Bump debhelper >= 10
+  * Bump Standard Version: 4.0.0
+
+ -- Youhei SASAKI <uwabami@gfd-dennou.org>  Tue, 29 Aug 2017 11:58:11 +0900
+
+ruby-stringex (2.5.2-3) unstable; urgency=medium
+
+  [ Cédric Boutillier ]
+  * Fix the number of the bug closed with the previous upload in the changelog
+    entry (760912 instead of 756460)
+
+  [ Antonio Terceiro ]
+  * new-i18n.patch: fix to work against new versions of ruby-i18n
+
+ -- Antonio Terceiro <terceiro@debian.org>  Fri, 31 Jul 2015 10:33:21 -0300
+
+ruby-stringex (2.5.2-2) unstable; urgency=medium
+
+  * Team upload.
+  * Build-depend on ruby-activerecord instead of ruby-activerecord-3.2
+    (Closes: #760912)
+
+ -- Cédric Boutillier <boutil@debian.org>  Tue, 09 Sep 2014 10:58:03 +0200
+
+ruby-stringex (2.5.2-1) unstable; urgency=medium
+
+  * Imported Upstream version 2.5.2
+  * Drop obsolete patches
+  * Update test path: follow upstream changes
+
+ -- Youhei SASAKI <uwabami@gfd-dennou.org>  Fri, 30 May 2014 01:15:06 +0900
+
+ruby-stringex (2.2.0-1) unstable; urgency=medium
+
+  * Imported Upstream version 2.2.0
+  * Fix FTBFS (Closes: #738396)
+    + Add Build-Depends: ruby-minitest, ruby-test-unit
+    + Add debian/patches/0002-add-minitest-autorun.patch
+  * Refresh all patches
+  * Bump Standard Version: 3.9.5
+
+ -- Youhei SASAKI <uwabami@gfd-dennou.org>  Tue, 11 Feb 2014 01:17:58 +0900
+
+ruby-stringex (2.0.3-1) unstable; urgency=low
+
+  * Initial release (Closes: #712769)
+
+ -- Youhei SASAKI <uwabami@gfd-dennou.org>  Wed, 19 Jun 2013 19:14:14 +0900
